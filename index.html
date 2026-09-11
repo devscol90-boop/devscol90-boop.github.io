@@ -4,252 +4,602 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Antonio Machado | Desarrollo y Automatización</title>
+    <title>Antonio Machado | Software & Automation</title>
 
     <meta name="description"
-          content="Portafolio profesional de proyectos de software, automatización, inteligencia artificial e integración de sistemas para trabajo remoto y servicios freelance.">
+        content="Portafolio profesional de Antonio Machado. Desarrollo de software, automatización, IA e integración de sistemas.">
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
+            box-sizing: border-box;
             margin: 0;
-            background: #f5f5f5;
-            color: #222;
+            padding: 0;
         }
 
-        header {
-            background: #111;
-            color: white;
-            padding: 70px 20px;
-            text-align: center;
+        html {
+            scroll-behavior: smooth;
         }
 
-        header h1 {
-            font-size: 42px;
-            margin-bottom: 15px;
-        }
-
-        header p {
-            font-size: 20px;
-            max-width: 700px;
-            margin: auto;
+        body {
+            font-family: Inter, Arial, sans-serif;
+            background: #080b12;
+            color: #e8ecf3;
             line-height: 1.6;
         }
 
-        main {
-            max-width: 1100px;
-            margin: auto;
-            padding: 50px 20px;
+        a {
+            color: inherit;
+            text-decoration: none;
         }
+
+        /* NAV */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(8, 11, 18, 0.88);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #1c2330;
+        }
+
+        .nav-container {
+            max-width: 1150px;
+            margin: auto;
+            padding: 18px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #6ea8fe;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+            font-size: 14px;
+            color: #aab4c5;
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 88vh;
+            display: flex;
+            align-items: center;
+            max-width: 1150px;
+            margin: auto;
+            padding: 80px 25px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            padding: 7px 13px;
+            border: 1px solid #283449;
+            border-radius: 30px;
+            font-size: 13px;
+            color: #8eb7ff;
+            margin-bottom: 25px;
+            background: #0d121d;
+        }
+
+        .hero h1 {
+            font-size: clamp(48px, 8vw, 86px);
+            line-height: 1;
+            letter-spacing: -4px;
+            margin-bottom: 28px;
+        }
+
+        .hero h1 span {
+            color: #6ea8fe;
+        }
+
+        .hero-description {
+            font-size: 21px;
+            color: #aeb8c8;
+            max-width: 720px;
+            margin-bottom: 38px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 13px 21px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            border: 1px solid #2b3547;
+            transition: 0.2s;
+        }
+
+        .btn-primary {
+            background: #e8ecf3;
+            color: #080b12;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            color: #d8dfeb;
+        }
+
+        .btn-secondary:hover {
+            background: #111824;
+        }
+
+        /* SECTIONS */
 
         section {
-            margin-bottom: 60px;
+            max-width: 1150px;
+            margin: auto;
+            padding: 90px 25px;
         }
 
-        h2 {
-            font-size: 30px;
-            margin-bottom: 20px;
+        .section-label {
+            color: #6ea8fe;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
         }
+
+        section h2 {
+            font-size: 38px;
+            margin-bottom: 18px;
+            letter-spacing: -1px;
+        }
+
+        .section-intro {
+            max-width: 700px;
+            color: #9ca8ba;
+            margin-bottom: 45px;
+        }
+
+        /* PROJECTS */
 
         .projects {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
         }
 
         .project {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+            background: #0d121b;
+            border: 1px solid #1d2635;
+            border-radius: 14px;
+            padding: 30px;
+            transition: 0.25s;
+        }
+
+        .project:hover {
+            transform: translateY(-4px);
+            border-color: #34445d;
+        }
+
+        .project-number {
+            color: #52647e;
+            font-size: 13px;
+            margin-bottom: 25px;
         }
 
         .project h3 {
-            margin-top: 0;
+            font-size: 25px;
+            margin-bottom: 12px;
         }
 
         .project p {
-            line-height: 1.6;
+            color: #9ca8ba;
+            margin-bottom: 24px;
         }
 
-        .buttons {
-            margin-top: 20px;
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
         }
 
-        .buttons a {
-            display: inline-block;
-            padding: 10px 15px;
-            margin-right: 8px;
-            margin-bottom: 8px;
-            background: #111;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
+        .tag {
+            padding: 5px 9px;
+            border-radius: 5px;
+            background: #151c28;
+            color: #aebbd0;
+            font-size: 12px;
         }
+
+        .project-links {
+            display: flex;
+            gap: 18px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .project-links a {
+            color: #78aaff;
+        }
+
+        /* SKILLS */
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            padding: 12px 17px;
+            border: 1px solid #273247;
+            border-radius: 8px;
+            color: #c1cada;
+            background: #0d121b;
+        }
+
+        /* ABOUT */
+
+        .about {
+            max-width: 780px;
+            color: #aeb8c8;
+            font-size: 18px;
+        }
+
+        .about p {
+            margin-bottom: 18px;
+        }
+
+        /* CONTACT */
+
+        .contact-box {
+            background: #0d121b;
+            border: 1px solid #1d2635;
+            border-radius: 14px;
+            padding: 40px;
+            max-width: 750px;
+        }
+
+        .contact-box p {
+            color: #aeb8c8;
+            margin-bottom: 25px;
+        }
+
+        /* FOOTER */
 
         footer {
-            background: #111;
-            color: white;
+            border-top: 1px solid #1c2330;
             text-align: center;
-            padding: 30px 20px;
+            padding: 30px;
+            color: #667287;
+            font-size: 13px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 750px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                min-height: 80vh;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .hero-description {
+                font-size: 18px;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 70px 20px;
+            }
+
+            section h2 {
+                font-size: 31px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-<header>
+<nav>
+    <div class="nav-container">
 
-    <h1>Antonio Machado</h1>
+        <div class="logo">
+            AM<span>.</span>
+        </div>
 
-    <p>
-        Desarrollo de software, automatización, inteligencia artificial
-        e integración de sistemas.
-    </p>
+        <ul class="nav-links">
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#competencias">Competencias</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
 
-    <p>
-        Portafolio de proyectos reales orientado a oportunidades de
-        trabajo remoto y servicios freelance.
-    </p>
+    </div>
+</nav>
 
-</header>
 
-<main>
+<header class="hero">
 
-    <section>
+    <div class="hero-content">
 
-        <h2>Sobre mí</h2>
+        <div class="eyebrow">
+            SOFTWARE · AUTOMATION · AI
+        </div>
 
-        <p>
-            Desarrollo soluciones prácticas utilizando software,
-            automatización, APIs, WebSockets, Android e inteligencia
-            artificial.
+        <h1>
+            Construyo<br>
+            <span>soluciones.</span>
+        </h1>
+
+        <p class="hero-description">
+            Desarrollo software, automatizaciones e integraciones
+            para convertir problemas reales en soluciones funcionales.
+            Disponible para oportunidades remotas y proyectos freelance.
         </p>
 
-        <p>
-            Mi enfoque es transformar necesidades concretas en
-            soluciones funcionales y automatizar procesos cuando
-            realmente aporta valor.
-        </p>
+        <div class="hero-buttons">
 
-    </section>
+            <a href="#proyectos" class="btn btn-primary">
+                Ver proyectos
+            </a>
 
-
-    <section>
-
-        <h2>Proyectos</h2>
-
-        <div class="projects">
-
-            <div class="project">
-
-                <h3>TikTok LIVE</h3>
-
-                <p>
-                    Sistema de conexión y captura de eventos de
-                    TikTok LIVE para procesamiento y análisis de
-                    información en tiempo real.
-                </p>
-
-                <div class="buttons">
-
-                    <a href="#">
-                        Ver demostración
-                    </a>
-
-                    <a href="#">
-                        Ver código
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <div class="project">
-
-                <h3>Deriv WebSocket</h3>
-
-                <p>
-                    Proyecto de integración mediante WebSockets
-                    para captura, procesamiento y simulación de
-                    información de mercado.
-                </p>
-
-                <div class="buttons">
-
-                    <a href="#">
-                        Ver proyecto
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <div class="project">
-
-                <h3>Zeus</h3>
-
-                <p>
-                    MVP de asistente para gestión de comunicaciones
-                    y operaciones mediante dispositivos Android
-                    e integración con WhatsApp.
-                </p>
-
-                <div class="buttons">
-
-                    <a href="#">
-                        Ver proyecto
-                    </a>
-
-                </div>
-
-            </div>
-
+            <a href="#contacto" class="btn btn-secondary">
+                Contactarme
+            </a>
 
         </div>
 
-    </section>
+    </div>
+
+</header>
 
 
-    <section>
+<section id="proyectos">
 
-        <h2>Competencias</h2>
+    <div class="section-label">
+        Proyectos seleccionados
+    </div>
+
+    <h2>Trabajo real.</h2>
+
+    <p class="section-intro">
+        Una selección de proyectos en los que he trabajado,
+        desde integraciones en tiempo real hasta aplicaciones
+        y sistemas de automatización.
+    </p>
+
+
+    <div class="projects">
+
+
+        <article class="project">
+
+            <div class="project-number">
+                01 / REAL-TIME
+            </div>
+
+            <h3>TikTok LIVE</h3>
+
+            <p>
+                Sistema de conexión y captura de eventos de TikTok LIVE,
+                procesamiento de información en tiempo real y generación
+                de datos para análisis y automatización.
+            </p>
+
+            <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">WebSockets</span>
+                <span class="tag">Streamlit</span>
+                <span class="tag">Real-time</span>
+            </div>
+
+            <div class="project-links">
+                <a href="#">Ver demostración →</a>
+                <a href="#">GitHub →</a>
+            </div>
+
+        </article>
+
+
+        <article class="project">
+
+            <div class="project-number">
+                02 / INTEGRATION
+            </div>
+
+            <h3>Deriv WebSocket</h3>
+
+            <p>
+                Arquitectura de captura y procesamiento de información
+                mediante WebSockets, con trabajadores de procesamiento,
+                análisis y simulación.
+            </p>
+
+            <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">WebSockets</span>
+                <span class="tag">APIs</span>
+                <span class="tag">Simulation</span>
+            </div>
+
+            <div class="project-links">
+                <a href="#">Ver proyecto →</a>
+            </div>
+
+        </article>
+
+
+        <article class="project">
+
+            <div class="project-number">
+                03 / ANDROID
+            </div>
+
+            <h3>Zeus</h3>
+
+            <p>
+                MVP de un asistente para facilitar la gestión de
+                comunicaciones y operaciones mediante Android
+                e integración con WhatsApp.
+            </p>
+
+            <div class="tags">
+                <span class="tag">Android</span>
+                <span class="tag">IA</span>
+                <span class="tag">WhatsApp</span>
+                <span class="tag">MVP</span>
+            </div>
+
+            <div class="project-links">
+                <a href="#">Ver demostración →</a>
+                <a href="#">GitHub →</a>
+            </div>
+
+        </article>
+
+
+        <article class="project">
+
+            <div class="project-number">
+                04 / MORE
+            </div>
+
+            <h3>Próximamente</h3>
+
+            <p>
+                Nuevos proyectos y soluciones se incorporarán
+                progresivamente al portafolio.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<section id="sobre-mi">
+
+    <div class="section-label">
+        Sobre mí
+    </div>
+
+    <h2>Construir primero.</h2>
+
+    <div class="about">
 
         <p>
-            Python · APIs · WebSockets · Automatización ·
-            Inteligencia Artificial · Android · Integración de sistemas
-        </p>
-
-    </section>
-
-
-    <section>
-
-        <h2>Contacto</h2>
-
-        <p>
-            Email:
-            <a href="mailto:devscol90@gmail.com">
-                devscol90@gmail.com
-            </a>
+            Mi enfoque parte de problemas concretos y busca convertirlos
+            en soluciones funcionales mediante software, automatización,
+            inteligencia artificial e integración de plataformas.
         </p>
 
         <p>
-            LinkedIn: próximamente
+            He trabajado con diferentes tecnologías y arquitecturas,
+            desarrollando proyectos propios y colaborativos y llevando
+            ideas desde el concepto hasta un MVP funcional.
         </p>
 
-    </section>
+        <p>
+            Actualmente busco oportunidades de trabajo remoto y proyectos
+            freelance donde estas capacidades puedan generar valor real.
+        </p>
 
-</main>
+    </div>
+
+</section>
+
+
+<section id="competencias">
+
+    <div class="section-label">
+        Competencias
+    </div>
+
+    <h2>Tecnología aplicada.</h2>
+
+    <p class="section-intro">
+        Herramientas y áreas que forman parte de los proyectos
+        presentados en este portafolio.
+    </p>
+
+    <div class="skills">
+
+        <span class="skill">Python</span>
+        <span class="skill">APIs</span>
+        <span class="skill">WebSockets</span>
+        <span class="skill">Automatización</span>
+        <span class="skill">Inteligencia Artificial</span>
+        <span class="skill">Android</span>
+        <span class="skill">Integración de sistemas</span>
+        <span class="skill">Procesamiento de datos</span>
+
+    </div>
+
+</section>
+
+
+<section id="contacto">
+
+    <div class="section-label">
+        Contacto
+    </div>
+
+    <h2>Hablemos.</h2>
+
+    <div class="contact-box">
+
+        <p>
+            Si buscas desarrollar una solución, automatizar un proceso
+            o integrar diferentes plataformas, puedes contactarme.
+        </p>
+
+        <a
+            href="mailto:devscol90@gmail.com"
+            class="btn btn-primary">
+            Enviar correo
+        </a>
+
+    </div>
+
+</section>
 
 
 <footer>
 
-    <p>
-        © 2026 Antonio Machado
-    </p>
+    © 2026 Antonio Machado · Portfolio
 
 </footer>
 
