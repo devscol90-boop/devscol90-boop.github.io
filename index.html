@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Antonio Machado | Software & Automation</title>
+    <title>Antonio Machado | Software, Tecnología y Gestión</title>
 
     <meta name="description"
-        content="Portafolio profesional de Antonio Machado. Desarrollo de software, automatización, IA e integración de sistemas.">
+        content="Antonio Machado. Arquitectura de software, desarrollo tecnológico, automatización, gestión de procesos y proyectos. Portafolio profesional y técnico.">
 
     <style>
         * {
@@ -21,7 +21,7 @@
         }
 
         body {
-            font-family: Inter, Arial, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             background: #080b12;
             color: #e8ecf3;
             line-height: 1.6;
@@ -32,19 +32,21 @@
             text-decoration: none;
         }
 
-        /* NAV */
+        /* =========================
+           NAVEGACIÓN
+        ========================= */
 
         nav {
             position: sticky;
             top: 0;
             z-index: 100;
-            background: rgba(8, 11, 18, 0.88);
+            background: rgba(8, 11, 18, 0.92);
             backdrop-filter: blur(12px);
             border-bottom: 1px solid #1c2330;
         }
 
         .nav-container {
-            max-width: 1150px;
+            max-width: 1180px;
             margin: auto;
             padding: 18px 25px;
             display: flex;
@@ -53,9 +55,10 @@
         }
 
         .logo {
-            font-size: 20px;
+            font-size: 19px;
             font-weight: 700;
-            letter-spacing: 1px;
+            letter-spacing: .3px;
+            white-space: nowrap;
         }
 
         .logo span {
@@ -64,7 +67,7 @@
 
         .nav-links {
             display: flex;
-            gap: 28px;
+            gap: 25px;
             list-style: none;
             font-size: 14px;
             color: #aab4c5;
@@ -74,37 +77,40 @@
             color: white;
         }
 
-        /* HERO */
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
+            max-width: 1180px;
             min-height: 88vh;
+            margin: auto;
+            padding: 90px 25px;
             display: flex;
             align-items: center;
-            max-width: 1150px;
-            margin: auto;
-            padding: 80px 25px;
         }
 
         .hero-content {
-            max-width: 800px;
+            max-width: 900px;
         }
 
         .eyebrow {
             display: inline-block;
             padding: 7px 13px;
+            margin-bottom: 25px;
             border: 1px solid #283449;
             border-radius: 30px;
-            font-size: 13px;
-            color: #8eb7ff;
-            margin-bottom: 25px;
             background: #0d121d;
+            color: #8eb7ff;
+            font-size: 12px;
+            letter-spacing: 1.5px;
         }
 
         .hero h1 {
-            font-size: clamp(48px, 8vw, 86px);
+            font-size: clamp(46px, 7vw, 82px);
             line-height: 1;
-            letter-spacing: -4px;
-            margin-bottom: 28px;
+            letter-spacing: -3px;
+            margin-bottom: 30px;
         }
 
         .hero h1 span {
@@ -112,25 +118,33 @@
         }
 
         .hero-description {
-            font-size: 21px;
+            max-width: 800px;
+            margin-bottom: 20px;
             color: #aeb8c8;
-            max-width: 720px;
+            font-size: 20px;
+        }
+
+        .hero-subtitle {
+            max-width: 760px;
             margin-bottom: 38px;
+            color: #7f8b9f;
+            font-size: 16px;
         }
 
         .hero-buttons {
             display: flex;
-            gap: 14px;
+            gap: 12px;
             flex-wrap: wrap;
         }
 
         .btn {
-            padding: 13px 21px;
+            display: inline-block;
+            padding: 13px 20px;
             border-radius: 8px;
-            font-weight: 600;
-            font-size: 14px;
             border: 1px solid #2b3547;
-            transition: 0.2s;
+            font-size: 14px;
+            font-weight: 600;
+            transition: .2s;
         }
 
         .btn-primary {
@@ -138,48 +152,84 @@
             color: #080b12;
         }
 
-        .btn-primary:hover {
-            transform: translateY(-2px);
-        }
-
         .btn-secondary {
             color: #d8dfeb;
         }
 
-        .btn-secondary:hover {
-            background: #111824;
+        .btn:hover {
+            transform: translateY(-2px);
         }
 
-        /* SECTIONS */
+        /* =========================
+           SECCIONES
+        ========================= */
 
         section {
-            max-width: 1150px;
+            max-width: 1180px;
             margin: auto;
             padding: 90px 25px;
         }
 
         .section-label {
+            margin-bottom: 10px;
             color: #6ea8fe;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 700;
             letter-spacing: 2px;
             text-transform: uppercase;
-            margin-bottom: 12px;
         }
 
         section h2 {
-            font-size: 38px;
             margin-bottom: 18px;
+            font-size: 38px;
             letter-spacing: -1px;
         }
 
         .section-intro {
-            max-width: 700px;
-            color: #9ca8ba;
+            max-width: 760px;
             margin-bottom: 45px;
+            color: #9ca8ba;
         }
 
-        /* PROJECTS */
+        /* =========================
+           DOS PERFILES
+        ========================= */
+
+        .profile-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+
+        .profile-card {
+            padding: 32px;
+            background: #0d121b;
+            border: 1px solid #1d2635;
+            border-radius: 14px;
+        }
+
+        .profile-card h3 {
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+
+        .profile-card p {
+            margin-bottom: 20px;
+            color: #9ca8ba;
+        }
+
+        .profile-card ul {
+            padding-left: 18px;
+            color: #aeb8c8;
+        }
+
+        .profile-card li {
+            margin-bottom: 7px;
+        }
+
+        /* =========================
+           PROYECTOS
+        ========================= */
 
         .projects {
             display: grid;
@@ -188,11 +238,11 @@
         }
 
         .project {
+            padding: 30px;
             background: #0d121b;
             border: 1px solid #1d2635;
             border-radius: 14px;
-            padding: 30px;
-            transition: 0.25s;
+            transition: .25s;
         }
 
         .project:hover {
@@ -201,25 +251,26 @@
         }
 
         .project-number {
+            margin-bottom: 23px;
             color: #52647e;
-            font-size: 13px;
-            margin-bottom: 25px;
+            font-size: 12px;
+            letter-spacing: 1px;
         }
 
         .project h3 {
-            font-size: 25px;
             margin-bottom: 12px;
+            font-size: 25px;
         }
 
         .project p {
+            margin-bottom: 22px;
             color: #9ca8ba;
-            margin-bottom: 24px;
         }
 
         .tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 7px;
             margin-bottom: 25px;
         }
 
@@ -242,62 +293,124 @@
             color: #78aaff;
         }
 
-        /* SKILLS */
+        /* =========================
+           SOLUCIONES
+        ========================= */
+
+        .solutions {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .solution {
+            padding: 25px;
+            background: #0d121b;
+            border: 1px solid #1d2635;
+            border-radius: 12px;
+        }
+
+        .solution h3 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .solution p {
+            color: #929eb1;
+            font-size: 14px;
+        }
+
+        /* =========================
+           EXPERIENCIA
+        ========================= */
+
+        .experience {
+            max-width: 850px;
+        }
+
+        .experience-block {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #1c2330;
+        }
+
+        .experience-block h3 {
+            margin-bottom: 7px;
+            font-size: 21px;
+        }
+
+        .experience-block .period {
+            margin-bottom: 13px;
+            color: #6ea8fe;
+            font-size: 13px;
+        }
+
+        .experience-block p {
+            color: #9ca8ba;
+        }
+
+        /* =========================
+           COMPETENCIAS
+        ========================= */
+
+        .competency-group {
+            margin-bottom: 35px;
+        }
+
+        .competency-group h3 {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
 
         .skills {
             display: flex;
             flex-wrap: wrap;
-            gap: 12px;
+            gap: 9px;
         }
 
         .skill {
-            padding: 12px 17px;
-            border: 1px solid #273247;
-            border-radius: 8px;
-            color: #c1cada;
+            padding: 9px 13px;
             background: #0d121b;
+            border: 1px solid #273247;
+            border-radius: 7px;
+            color: #c1cada;
+            font-size: 13px;
         }
 
-        /* ABOUT */
-
-        .about {
-            max-width: 780px;
-            color: #aeb8c8;
-            font-size: 18px;
-        }
-
-        .about p {
-            margin-bottom: 18px;
-        }
-
-        /* CONTACT */
+        /* =========================
+           CONTACTO
+        ========================= */
 
         .contact-box {
+            max-width: 760px;
+            padding: 40px;
             background: #0d121b;
             border: 1px solid #1d2635;
             border-radius: 14px;
-            padding: 40px;
-            max-width: 750px;
         }
 
         .contact-box p {
-            color: #aeb8c8;
             margin-bottom: 25px;
+            color: #aeb8c8;
         }
 
-        /* FOOTER */
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
+            padding: 30px;
             border-top: 1px solid #1c2330;
             text-align: center;
-            padding: 30px;
             color: #667287;
             font-size: 13px;
         }
 
-        /* MOBILE */
+        /* =========================
+           MÓVIL
+        ========================= */
 
-        @media (max-width: 750px) {
+        @media (max-width: 800px) {
 
             .nav-links {
                 display: none;
@@ -305,17 +418,16 @@
 
             .hero {
                 min-height: 80vh;
+                padding-top: 70px;
             }
 
             .hero h1 {
                 letter-spacing: -2px;
             }
 
-            .hero-description {
-                font-size: 18px;
-            }
-
-            .projects {
+            .profile-grid,
+            .projects,
+            .solutions {
                 grid-template-columns: 1fr;
             }
 
@@ -326,57 +438,77 @@
             section h2 {
                 font-size: 31px;
             }
+
+            .hero-description {
+                font-size: 18px;
+            }
         }
     </style>
 </head>
 
 <body>
 
+<!-- =========================
+     NAV
+========================= -->
+
 <nav>
+
     <div class="nav-container">
 
         <div class="logo">
-            AM<span>.</span>
+            Antonio Machado<span>.</span>
         </div>
 
         <ul class="nav-links">
+            <li><a href="#perfil">Perfil</a></li>
             <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#sobre-mi">Sobre mí</a></li>
-            <li><a href="#competencias">Competencias</a></li>
+            <li><a href="#soluciones">Soluciones</a></li>
+            <li><a href="#experiencia">Experiencia</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
 
     </div>
+
 </nav>
 
+
+<!-- =========================
+     HERO
+========================= -->
 
 <header class="hero">
 
     <div class="hero-content">
 
         <div class="eyebrow">
-            SOFTWARE · AUTOMATION · AI
+            SOFTWARE · TECHNOLOGY · PROCESS · MANAGEMENT
         </div>
 
         <h1>
-            Construyo<br>
+            Diseño y construyo<br>
             <span>soluciones.</span>
         </h1>
 
         <p class="hero-description">
-            Desarrollo software, automatizaciones e integraciones
-            para convertir problemas reales en soluciones funcionales.
-            Disponible para oportunidades remotas y proyectos freelance.
+            Integro arquitectura y desarrollo de software con
+            gestión de procesos, proyectos, automatización,
+            datos e inteligencia artificial.
+        </p>
+
+        <p class="hero-subtitle">
+            Perfil profesional orientado a oportunidades remotas,
+            consultoría y proyectos freelance.
         </p>
 
         <div class="hero-buttons">
 
             <a href="#proyectos" class="btn btn-primary">
-                Ver proyectos
+                Ver proyectos técnicos
             </a>
 
-            <a href="#contacto" class="btn btn-secondary">
-                Contactarme
+            <a href="#perfil" class="btn btn-secondary">
+                Ver perfil profesional
             </a>
 
         </div>
@@ -386,18 +518,95 @@
 </header>
 
 
+<!-- =========================
+     PERFIL
+========================= -->
+
+<section id="perfil">
+
+    <div class="section-label">
+        Dos dimensiones
+    </div>
+
+    <h2>Experiencia + tecnología.</h2>
+
+    <p class="section-intro">
+        Una combinación de experiencia profesional en gestión,
+        procesos y proyectos con una transición práctica hacia
+        el desarrollo tecnológico y la automatización.
+    </p>
+
+
+    <div class="profile-grid">
+
+        <article class="profile-card">
+
+            <h3>Perfil profesional</h3>
+
+            <p>
+                Experiencia en planeación, gestión de proyectos,
+                procesos, operaciones, administración de recursos,
+                coordinación de equipos y seguimiento de resultados.
+            </p>
+
+            <ul>
+                <li>Gestión de proyectos</li>
+                <li>Planeación estratégica y operativa</li>
+                <li>Gestión y mejora de procesos</li>
+                <li>Administración de recursos</li>
+                <li>Gestión operativa</li>
+                <li>Gestión de riesgos</li>
+                <li>Coordinación de equipos</li>
+                <li>Gestión documental e información</li>
+            </ul>
+
+        </article>
+
+
+        <article class="profile-card">
+
+            <h3>Perfil técnico</h3>
+
+            <p>
+                Desarrollo práctico de soluciones tecnológicas
+                mediante programación, automatización, procesamiento
+                de datos e integración de sistemas.
+            </p>
+
+            <ul>
+                <li>Arquitectura y diseño de soluciones</li>
+                <li>Python</li>
+                <li>APIs</li>
+                <li>WebSockets</li>
+                <li>Procesamiento de datos</li>
+                <li>Automatización</li>
+                <li>Arquitecturas modulares</li>
+                <li>IA generativa y LLM</li>
+            </ul>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PROYECTOS
+========================= -->
+
 <section id="proyectos">
 
     <div class="section-label">
-        Proyectos seleccionados
+        Portafolio técnico
     </div>
 
-    <h2>Trabajo real.</h2>
+    <h2>Proyectos reales.</h2>
 
     <p class="section-intro">
-        Una selección de proyectos en los que he trabajado,
-        desde integraciones en tiempo real hasta aplicaciones
-        y sistemas de automatización.
+        Proyectos utilizados para desarrollar y demostrar
+        capacidades prácticas de desarrollo, integración,
+        procesamiento de información y automatización.
     </p>
 
 
@@ -413,21 +622,28 @@
             <h3>TikTok LIVE</h3>
 
             <p>
-                Sistema de conexión y captura de eventos de TikTok LIVE,
-                procesamiento de información en tiempo real y generación
-                de datos para análisis y automatización.
+                Sistema de conexión y captura de eventos de
+                TikTok LIVE para procesamiento de información
+                en tiempo real y generación de datos para análisis.
             </p>
 
             <div class="tags">
                 <span class="tag">Python</span>
-                <span class="tag">WebSockets</span>
-                <span class="tag">Streamlit</span>
+                <span class="tag">TikTok LIVE</span>
                 <span class="tag">Real-time</span>
+                <span class="tag">Streamlit</span>
             </div>
 
             <div class="project-links">
-                <a href="#">Ver demostración →</a>
-                <a href="#">GitHub →</a>
+
+                <a href="#">
+                    Ver demostración →
+                </a>
+
+                <a href="#">
+                    GitHub →
+                </a>
+
             </div>
 
         </article>
@@ -436,26 +652,31 @@
         <article class="project">
 
             <div class="project-number">
-                02 / INTEGRATION
+                02 / DATA & WEBSOCKETS
             </div>
 
-            <h3>Deriv WebSocket</h3>
+            <h3>Deriv Research</h3>
 
             <p>
-                Arquitectura de captura y procesamiento de información
-                mediante WebSockets, con trabajadores de procesamiento,
-                análisis y simulación.
+                Arquitectura de captura, procesamiento, validación
+                y simulación de información utilizando comunicación
+                mediante WebSockets y componentes modulares.
             </p>
 
             <div class="tags">
                 <span class="tag">Python</span>
                 <span class="tag">WebSockets</span>
                 <span class="tag">APIs</span>
-                <span class="tag">Simulation</span>
+                <span class="tag">JSON</span>
+                <span class="tag">CSV</span>
             </div>
 
             <div class="project-links">
-                <a href="#">Ver proyecto →</a>
+
+                <a href="#">
+                    Ver proyecto →
+                </a>
+
             </div>
 
         </article>
@@ -470,9 +691,9 @@
             <h3>Zeus</h3>
 
             <p>
-                MVP de un asistente para facilitar la gestión de
-                comunicaciones y operaciones mediante Android
-                e integración con WhatsApp.
+                MVP de asistente para facilitar operaciones y
+                comunicaciones mediante Android e integración
+                con WhatsApp.
             </p>
 
             <div class="tags">
@@ -483,8 +704,15 @@
             </div>
 
             <div class="project-links">
-                <a href="#">Ver demostración →</a>
-                <a href="#">GitHub →</a>
+
+                <a href="#">
+                    Ver demostración →
+                </a>
+
+                <a href="#">
+                    GitHub →
+                </a>
+
             </div>
 
         </article>
@@ -493,14 +721,14 @@
         <article class="project">
 
             <div class="project-number">
-                04 / MORE
+                04 / FUTURE
             </div>
 
-            <h3>Próximamente</h3>
+            <h3>Nuevos proyectos</h3>
 
             <p>
-                Nuevos proyectos y soluciones se incorporarán
-                progresivamente al portafolio.
+                El portafolio crecerá progresivamente con nuevos
+                proyectos y soluciones desarrolladas.
             </p>
 
         </article>
@@ -510,66 +738,256 @@
 </section>
 
 
-<section id="sobre-mi">
+<!-- =========================
+     SOLUCIONES
+========================= -->
+
+<section id="soluciones">
 
     <div class="section-label">
-        Sobre mí
+        Qué puedo aportar
     </div>
 
-    <h2>Construir primero.</h2>
-
-    <div class="about">
-
-        <p>
-            Mi enfoque parte de problemas concretos y busca convertirlos
-            en soluciones funcionales mediante software, automatización,
-            inteligencia artificial e integración de plataformas.
-        </p>
-
-        <p>
-            He trabajado con diferentes tecnologías y arquitecturas,
-            desarrollando proyectos propios y colaborativos y llevando
-            ideas desde el concepto hasta un MVP funcional.
-        </p>
-
-        <p>
-            Actualmente busco oportunidades de trabajo remoto y proyectos
-            freelance donde estas capacidades puedan generar valor real.
-        </p>
-
-    </div>
-
-</section>
-
-
-<section id="competencias">
-
-    <div class="section-label">
-        Competencias
-    </div>
-
-    <h2>Tecnología aplicada.</h2>
+    <h2>Soluciones orientadas a problemas.</h2>
 
     <p class="section-intro">
-        Herramientas y áreas que forman parte de los proyectos
-        presentados en este portafolio.
+        La tecnología es el medio. El objetivo es estructurar
+        procesos, resolver problemas y construir soluciones
+        que puedan utilizarse en la práctica.
     </p>
 
-    <div class="skills">
 
-        <span class="skill">Python</span>
-        <span class="skill">APIs</span>
-        <span class="skill">WebSockets</span>
-        <span class="skill">Automatización</span>
-        <span class="skill">Inteligencia Artificial</span>
-        <span class="skill">Android</span>
-        <span class="skill">Integración de sistemas</span>
-        <span class="skill">Procesamiento de datos</span>
+    <div class="solutions">
+
+
+        <article class="solution">
+
+            <h3>Automatización de procesos</h3>
+
+            <p>
+                Identificación y automatización de tareas y flujos
+                repetitivos mediante software e IA cuando aporta valor.
+            </p>
+
+        </article>
+
+
+        <article class="solution">
+
+            <h3>Integración de sistemas</h3>
+
+            <p>
+                Conexión de plataformas y servicios mediante APIs,
+                WebSockets y procesamiento estructurado de información.
+            </p>
+
+        </article>
+
+
+        <article class="solution">
+
+            <h3>Diseño de workflows</h3>
+
+            <p>
+                Estructuración de procesos, estados, tareas,
+                validaciones y mecanismos de seguimiento.
+            </p>
+
+        </article>
+
+
+        <article class="solution">
+
+            <h3>Arquitectura de soluciones</h3>
+
+            <p>
+                Análisis, diseño y organización de componentes
+                para construir soluciones modulares.
+            </p>
+
+        </article>
+
+
+        <article class="solution">
+
+            <h3>Gestión de proyectos</h3>
+
+            <p>
+                Planeación, seguimiento, organización de recursos,
+                riesgos, objetivos y resultados.
+            </p>
+
+        </article>
+
+
+        <article class="solution">
+
+            <h3>Análisis y mejora</h3>
+
+            <p>
+                Análisis de problemas y procesos para identificar
+                oportunidades de mejora y soluciones prácticas.
+            </p>
+
+        </article>
 
     </div>
 
 </section>
 
+
+<!-- =========================
+     EXPERIENCIA
+========================= -->
+
+<section id="experiencia">
+
+    <div class="section-label">
+        Trayectoria
+    </div>
+
+    <h2>Experiencia profesional.</h2>
+
+    <div class="experience">
+
+
+        <div class="experience-block">
+
+            <h3>Armada Nacional de Colombia</h3>
+
+            <div class="period">
+                2001 – 2019
+            </div>
+
+            <p>
+                Más de 18 años de experiencia en liderazgo,
+                administración, planeación, operaciones, logística,
+                gestión de personal, mantenimiento, procesos
+                y proyectos.
+            </p>
+
+        </div>
+
+
+        <div class="experience-block">
+
+            <h3>Gestión de procesos y proyectos</h3>
+
+            <div class="period">
+                Experiencia profesional
+            </div>
+
+            <p>
+                Planeación y seguimiento de planes y proyectos,
+                administración de recursos, análisis y mejora
+                de procesos, gestión de riesgos, coordinación
+                de equipos y consolidación de información.
+            </p>
+
+        </div>
+
+
+        <div class="experience-block">
+
+            <h3>Desarrollo tecnológico</h3>
+
+            <div class="period">
+                2026 – Actualidad
+            </div>
+
+            <p>
+                Formación práctica y desarrollo de proyectos
+                propios en programación, automatización,
+                procesamiento de datos, APIs, WebSockets,
+                arquitecturas modulares e inteligencia artificial.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     COMPETENCIAS
+========================= -->
+
+<section>
+
+    <div class="section-label">
+        Capacidades
+    </div>
+
+    <h2>Competencias.</h2>
+
+
+    <div class="competency-group">
+
+        <h3>Gestión y proyectos</h3>
+
+        <div class="skills">
+
+            <span class="skill">Gestión de proyectos</span>
+            <span class="skill">Planeación estratégica</span>
+            <span class="skill">Planeación operativa</span>
+            <span class="skill">Seguimiento</span>
+            <span class="skill">Gestión de recursos</span>
+            <span class="skill">Gestión de riesgos</span>
+            <span class="skill">Liderazgo</span>
+            <span class="skill">Toma de decisiones</span>
+
+        </div>
+
+    </div>
+
+
+    <div class="competency-group">
+
+        <h3>Procesos y operaciones</h3>
+
+        <div class="skills">
+
+            <span class="skill">Análisis de procesos</span>
+            <span class="skill">Mejora continua</span>
+            <span class="skill">Control operativo</span>
+            <span class="skill">Logística</span>
+            <span class="skill">Inventarios</span>
+            <span class="skill">Gestión documental</span>
+            <span class="skill">Gestión de información</span>
+
+        </div>
+
+    </div>
+
+
+    <div class="competency-group">
+
+        <h3>Tecnología</h3>
+
+        <div class="skills">
+
+            <span class="skill">Python</span>
+            <span class="skill">APIs</span>
+            <span class="skill">WebSockets</span>
+            <span class="skill">JSON</span>
+            <span class="skill">CSV</span>
+            <span class="skill">Automatización</span>
+            <span class="skill">Arquitectura modular</span>
+            <span class="skill">Desarrollo de software</span>
+            <span class="skill">IA generativa</span>
+            <span class="skill">LLM</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACTO
+========================= -->
 
 <section id="contacto">
 
@@ -582,14 +1000,15 @@
     <div class="contact-box">
 
         <p>
-            Si buscas desarrollar una solución, automatizar un proceso
-            o integrar diferentes plataformas, puedes contactarme.
+            Disponible para oportunidades de trabajo remoto,
+            proyectos freelance y soluciones relacionadas con
+            tecnología, automatización, procesos y gestión.
         </p>
 
         <a
             href="mailto:devscol90@gmail.com"
             class="btn btn-primary">
-            Enviar correo
+            Contactarme por correo
         </a>
 
     </div>
@@ -599,7 +1018,7 @@
 
 <footer>
 
-    © 2026 Antonio Machado · Portfolio
+    Antonio Machado · Software · Technology · Process · Management
 
 </footer>
 
