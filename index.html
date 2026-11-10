@@ -407,6 +407,36 @@
         }
 
         /* =========================
+           VISUALES SIAAD
+        ========================= */
+
+        .siaad-visual {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            max-height: 430px;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            object-position: center;
+            margin: 0 0 26px;
+            border: 1px solid #26364d;
+            border-radius: 12px;
+            background: #080d16;
+            box-shadow: 0 16px 38px rgba(0, 0, 0, .28);
+        }
+
+        .siaad-architecture {
+            max-height: 310px;
+            object-fit: contain;
+            padding: 12px;
+            margin-top: 18px;
+            margin-bottom: 24px;
+            background: #080d16;
+            box-shadow: none;
+        }
+
+        /* =========================
            MÓVIL
         ========================= */
 
@@ -441,6 +471,20 @@
 
             .hero-description {
                 font-size: 18px;
+            }
+
+            .siaad-visual {
+                max-height: 250px;
+                aspect-ratio: 16 / 10;
+                margin-bottom: 20px;
+                border-radius: 9px;
+            }
+
+            .siaad-architecture {
+                max-height: 220px;
+                aspect-ratio: auto;
+                padding: 7px;
+                margin-top: 14px;
             }
         }
     </style>
@@ -625,7 +669,7 @@
                 situacional; no ejecuta interferencia ni neutralización.
             </p>
             <p style="margin-top:-8px; color:#71849e; font-size:12px;">Imagen conceptual de presentación del sistema.</p>
-            <img class="siaad-visual" style="margin-top:18px; box-shadow:none;" src="assets/siaad-conceptual.svg" alt="Esquema explicativo de la arquitectura integrada C2 de SIAAD">
+            <img class="siaad-visual" class="siaad-visual siaad-architecture" src="assets/siaad-conceptual.svg" alt="Esquema explicativo de la arquitectura integrada C2 de SIAAD">
             <div class="tags">
                 <span class="tag">Python</span>
                 <span class="tag">YOLOv11s</span>
